@@ -4,8 +4,8 @@ describe Api::V1::MixesController do
 
   describe "GET 'index' " do
     it "returns a 200 response" do
-       get :index, format: :json
-      expect(response).to be_success
+      get :index, format: :json
+      expect(response).to have_http_status(200)
     end
 
     it "returns all the students" do
@@ -24,7 +24,7 @@ describe Api::V1::MixesController do
 
     it "returns a 200 response" do
       create_mix
-      expect(response).to be_success
+      expect(response).to have_http_status(200)
     end
 
     it "creates a mix in the database" do

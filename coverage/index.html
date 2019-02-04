@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T17:12:12+00:00">2019-02-04T17:12:12+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T17:16:35+00:00">2019-02-04T17:16:35+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.3%</span></span>
+    (<span class="covered_percent"><span class="green">91.23%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.97
+         0.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>19</b> files in total.
-    <b>54</b> relevant lines. 
+    <b>57</b> relevant lines. 
     <span class="green"><b>52</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -222,12 +222,12 @@
       
       <tr>
         <td class="strong"><a href="#4cb955b7fd56369784a18144634ce807e7600727" class="src_link" title="spec/feature/homepage_spec.rb">spec/feature/homepage_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>9</td>
+        <td class="red strong">62.5 %</td>
+        <td>12</td>
+        <td>8</td>
         <td>5</td>
-        <td>5</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>3</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -1878,11 +1878,11 @@
         <div class="source_table" id="4cb955b7fd56369784a18144634ce807e7600727">
   <div class="header">
     <h3>spec/feature/homepage_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">62.5 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
+      <b>8</b> relevant lines. 
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -1904,7 +1904,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">feature &quot;user visits homepage&quot; do</code>
+          <code class="ruby">feature &quot;user visits homepage and adds mix&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -1928,16 +1928,34 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_css &#39;h1&#39;, text: &#39;Hello, world&#39;</code>
+          <code class="ruby">    expect(page).to have_css &#39;h1&#39;, text: &#39;Mix Manager&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">    fill_in &#39;Add Mix&#39;, with: &#39;Test Mix&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    click_button &#39;Submit&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">    expect(page).to have_content &#39;Test Mix&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>

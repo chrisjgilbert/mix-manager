@@ -12,7 +12,7 @@ describe Api::V1::MixesController do
       FactoryBot.create_list(:mix, 5)
       get :index, format: :json
       parsed_response = JSON.parse(response.body)
-      expect(parsed_response['mixes'].length).to eq(5)
+      expect(parsed_response.length).to eq(5)
     end
   end
 end

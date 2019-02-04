@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe Api::V1::MixesController do
+
   describe "GET 'index' " do
     it "returns a successful 200 response" do
        get :index, format: :json

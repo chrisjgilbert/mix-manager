@@ -5,16 +5,17 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         0,
         null,
         null,
@@ -269,11 +270,10 @@
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/spec/factories.rb": [
         1,
-        null,
         1,
-        1,
-        1,
-        null,
+        6,
+        6,
+        6,
         null,
         null
       ],
@@ -282,9 +282,28 @@
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/app/helpers/application_helper.rb": [
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/api/v1/mixes_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/application_controller.rb": [
         null,
         null,
         1,
@@ -295,16 +314,48 @@
         null,
         1,
         1,
-        0,
+        1,
         null,
-        0,
+        1,
         0,
         0,
         0,
         null,
         null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/spec/models/mix_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/app/models/mix.rb": [
+        1,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/app/models/application_record.rb": [
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/site_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1549301569
+    "timestamp": 1549302966
   }
 }

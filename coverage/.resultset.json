@@ -1,17 +1,22 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/homepage_spec.rb": [
-        1,
-        null,
-        1,
-        1,
+      "/Users/chris/CodeProjects/Personal/mix-manager/spec/controllers/mixes_controller_spec.rb": [
         1,
         null,
         1,
         0,
         0,
         0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null
       ],
@@ -31,14 +36,12 @@
         0,
         0,
         null,
-        1,
         null,
         1,
-        null,
         1,
-        null,
         1,
-        null,
+        1,
+        1,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/config/environment.rb": [
@@ -264,6 +267,16 @@
         null,
         null
       ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/spec/factories.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/chris/CodeProjects/Personal/mix-manager/config/routes.rb": [
         null,
         null,
@@ -277,21 +290,21 @@
         1,
         null
       ],
-      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/site_controller.rb": [
+      "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/user_adds_mix_spec.rb": [
         1,
         null,
         1,
-        null,
-        null,
-        null
-      ],
-      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/application_controller.rb": [
-        null,
-        null,
         1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ]
     },
-    "timestamp": 1549300595
+    "timestamp": 1549301569
   }
 }

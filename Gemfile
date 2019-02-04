@@ -19,6 +19,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'simplecov'
+  gem "factory_bot_rails"
 end
 
 group :development do

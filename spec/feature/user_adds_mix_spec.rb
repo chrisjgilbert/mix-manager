@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "user visits homepage and adds mix" do
+feature "user visits homepage and adds mix", js: true do
   scenario "successfully" do
     visit root_path
 

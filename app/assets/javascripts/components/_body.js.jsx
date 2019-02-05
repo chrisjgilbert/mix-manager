@@ -6,6 +6,8 @@ class Body extends React.Component {
     }
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.addNewMix = this.addNewMix.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+    this.deleteMix = this.deleteMix.bind(this)
   }
 
   componentDidMount() {
@@ -15,7 +17,7 @@ class Body extends React.Component {
       .then(
         (result) => {
           this.setState({
-            erro: null,
+            error: null,
             isLoaded: false,
             mixes: result
           });
@@ -49,7 +51,26 @@ class Body extends React.Component {
 
   addNewMix(mix){
     this.setState({
-      mixea: this.state.mixes.push(mix)
+      mixes: this.state.mixes.push(mix)
+    })
+  }
+
+  handleDelete(id) {
+    fetch(`/api/v1/mixes/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type' : 'application/json'
+      }
+    }).then(
+      (response) => {
+        this.deleteMix(id)
+      })
+  }
+
+  deleteMix(id) {
+    let updatedMixes = this.state.fruits.filter(mix => mix.id !== id)
+    this.setState({
+      mixes: updatedMixes
     })
   }
 
@@ -57,7 +78,7 @@ class Body extends React.Component {
     return (
       <div>
         <NewMix handleFormSubmit={this.handleFormSubmit} />
-        <AllMixes mixes={this.state.mixes} />
+        <AllMixes mixes={this.state.mixes} handleDelete={this.handleDelete} />
       </div>
     )
   }

@@ -12,8 +12,8 @@ I would like to be able to save links to mixes
 
 ```
 As a music fan
-So I can listen to the mixes I have saved
-I would like to be able to stream the audio
+So I can get rid of mixes after I have listened to them
+I would like to be able to delete them from my saved listed
 ```
 
 ```

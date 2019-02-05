@@ -8,7 +8,6 @@ feature "user visits homepage", type: :feature, js: true do
     expect(page).to have_css 'p', text: 'description of mix'
     expect(page).to have_selector(:css, 'a[href="url of mix"]')
   end
-
 end
 
 feature "user visits homepage", type: :feature, js: true do

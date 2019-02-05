@@ -40,18 +40,6 @@
         1,
         1,
         null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/feature_helpers.rb": [
@@ -61,6 +49,20 @@
         2,
         2,
         2,
+        null
+      ],
+      "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/user_deletes_mix_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/spec/models/mix_spec.rb": [
@@ -101,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1549383440
+    "timestamp": 1549385381
   }
 }

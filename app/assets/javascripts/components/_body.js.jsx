@@ -10,7 +10,8 @@ class Body extends React.Component {
 
   componentDidMount() {
     fetch("api/v1/mixes.json")
-      .then(res => res.json())
+      .then(
+        res => res.json())
       .then(
         (result) => {
           this.setState({

@@ -10,5 +10,6 @@ feature "user visits homepage and adds mix", type: :feature, js: true do
     click_button 'submit'
     expect(page).to have_css 'h2', text: 'title of mix'
     expect(page).to have_css 'p', text: 'description of mix'
+    expect(page).to have_selector(:css, 'a[href="url of mix"]')
   end
 end

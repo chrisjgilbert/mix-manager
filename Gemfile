@@ -23,6 +23,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'shoulda'
   gem 'database_cleaner'
+  gem 'phantomjs'
+  gem 'poltergeist'
 end
 
 group :development do

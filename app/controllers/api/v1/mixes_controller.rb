@@ -16,7 +16,9 @@ class Api::V1::MixesController < ApplicationController
   end
 
   def update
-    head 200
+    mix = Mix.find(params[:id])
+    mix.update_attributes(mix_params)
+    render json: mix
   end
 
   private

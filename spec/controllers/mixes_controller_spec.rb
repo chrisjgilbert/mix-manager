@@ -45,9 +45,18 @@ describe Api::V1::MixesController do
   end
 
   describe "PATCH 'update'" do
+    let!(:mix) { FactoryBot.create(:mix) }
     it "returns a 200 response" do
-      patch :update, params: { id: 1 }
+      patch :update, params: { id: mix.id, mix: { title: mix.id, description: mix.description, url: mix.url } }
       expect(response).to have_http_status(200)
+    end
+
+    it "returns updates mix from the db" do
+      patch :update, params: { id: mix.id, mix: { title: 'updated title', description: 'updated description', url: 'updated url' } }
+      parsed_response = JSON.parse(response.body)
+      expect(parsed_response['title']).to eq('updated title')
+      expect(parsed_response['description']).to eq('updated description')
+      expect(parsed_response['url']).to eq('updated url')
     end
   end
 end

@@ -43,4 +43,11 @@ describe Api::V1::MixesController do
       expect { delete_mix_action }.to change { Mix.count }.by(-1)
     end
   end
+
+  describe "PATCH 'update'" do
+    it "returns a 200 response" do
+      patch :update, params: { id: 1 }
+      expect(response).to have_http_status(200)
+    end
+  end
 end

@@ -32,4 +32,11 @@ describe Api::V1::MixesController do
       expect { create_mix }.to change { Mix.count }.by(1)
     end
   end
+
+  describe "DESTROY 'delete' " do
+    it "returns a 200 response" do
+      delete :destroy, params: { id: 1 }
+      expect(response).to have_http_status(200)
+    end
+  end
 end

@@ -10,6 +10,10 @@ class Api::V1::MixesController < ApplicationController
     render json: mix
   end
 
+  def destroy
+    head 200
+  end
+
   private
 
   def mix_params

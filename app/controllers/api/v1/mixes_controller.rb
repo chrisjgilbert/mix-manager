@@ -15,6 +15,10 @@ class Api::V1::MixesController < ApplicationController
     head 200
   end
 
+  def update
+    head 200
+  end
+
   private
 
   def mix_params

@@ -5,7 +5,7 @@ class Body extends React.Component {
       mixes: []
     }
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
-    this.addNewMix = this.addNewMix.bind(this)
+    this.addMix = this.addMix.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
     this.deleteMix = this.deleteMix.bind(this)
   }
@@ -43,13 +43,13 @@ class Body extends React.Component {
     }).then((response) => {
         return response.json()
     }).then((mix) => {
-        this.addNewMix(mix)
+        this.addMix(mix)
     }).catch((err) => {
         console.log(err)
     })
   }
 
-  addNewMix(mix){
+  addMix(mix){
     this.setState(previousState => ({
         mixes: [...previousState.mixes, mix]
     }))
@@ -61,17 +61,17 @@ class Body extends React.Component {
       headers: {
         'Content-Type' : 'application/json'
       }
-    }).then(
-      (response) => {
+    }).then((response) => {
         this.deleteMix(id)
-      })
+    }).catch((err) => {
+        console.log(err)
+    })
   }
 
   deleteMix(id) {
-    let updatedMixes = this.state.mixes.filter(mix => mix.id !== id)
-    this.setState({
-      mixes: updatedMixes
-    })
+    this.setState(prevState => ({
+      mixes: prevState.mixes.filter(mix => mix.id !== id)
+    }))
   }
 
   render() {

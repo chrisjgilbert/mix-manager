@@ -7,7 +7,6 @@ describe Api::V1::MixesController do
       get :index, format: :json
       expect(response).to have_http_status(200)
     end
-
     it "returns all the students" do
       FactoryBot.create_list(:mix, 5)
       get :index, format: :json
@@ -21,12 +20,10 @@ describe Api::V1::MixesController do
       mix = FactoryBot.build(:mix)
       post :create, params: { mix: { title: mix.title, description: mix.description, url: mix.url } }
     end
-
     it "returns a 200 response" do
       create_mix
       expect(response).to have_http_status(200)
     end
-
     it "creates a mix in the database" do
       create_mix
       expect { create_mix }.to change { Mix.count }.by(1)
@@ -34,13 +31,13 @@ describe Api::V1::MixesController do
   end
 
   describe "DESTROY 'delete' " do
+    let!(:mix) { FactoryBot.create(:mix) }
+
     it "returns a 200 response" do
-      delete :destroy, params: { id: 1 }
+      delete :destroy, params: { id: mix.id }
       expect(response).to have_http_status(200)
     end
-
     it "deletes a mix from the database" do
-      mix = FactoryBot.create(:mix)
       expect { delete :destroy, params: { id: mix.id } }.to change { Mix.count }.by(-1)
     end
   end

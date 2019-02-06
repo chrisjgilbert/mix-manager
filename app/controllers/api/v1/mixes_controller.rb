@@ -11,6 +11,7 @@ class Api::V1::MixesController < ApplicationController
   end
 
   def destroy
+    Mix.destroy(params[:id])
     head 200
   end
 

@@ -38,5 +38,10 @@ describe Api::V1::MixesController do
       delete :destroy, params: { id: 1 }
       expect(response).to have_http_status(200)
     end
+
+    it "deletes a mix from the database" do
+      mix = FactoryBot.create(:mix)
+      expect { delete :destroy, params: { id: mix.id } }.to change { Mix.count }.by(-1)
+    end
   end
 end

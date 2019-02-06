@@ -5,23 +5,23 @@
         1,
         null,
         1,
-        6,
-        6,
+        2,
+        2,
         null,
         null,
         1,
-        5,
-        5,
+        3,
+        3,
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
         null,
         1,
-        5,
+        3,
         null,
         null,
         null
@@ -39,20 +39,20 @@
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/feature_helpers.rb": [
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
+        0,
+        0,
+        0,
+        0,
+        0,
         null
       ],
       "/Users/chris/CodeProjects/Personal/mix-manager/spec/feature/user_deletes_mix_spec.rb": [
@@ -61,8 +61,8 @@
         null,
         1,
         1,
-        1,
-        1,
+        0,
+        0,
         0,
         0,
         0,
@@ -97,16 +97,8 @@
         1,
         1,
         null
-      ],
-      "/Users/chris/CodeProjects/Personal/mix-manager/app/controllers/site_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1549450533
+    "timestamp": 1549450838
   }
 }

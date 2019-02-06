@@ -68,7 +68,7 @@ class Body extends React.Component {
   }
 
   deleteMix(id) {
-    let updatedMixes = this.state.fruits.filter(mix => mix.id !== id)
+    let updatedMixes = this.state.mixes.filter(mix => mix.id !== id)
     this.setState({
       mixes: updatedMixes
     })

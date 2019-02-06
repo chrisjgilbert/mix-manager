@@ -4,12 +4,13 @@ const NewMix = (props) => {
   return (
     <form
      onSubmit={(e) => {
+       e.preventDefault()
        props.handleFormSubmit(
          formFields.title.value,
          formFields.description.value,
          formFields.url.value
        );
-        e.target.reset(); }
+        e.target.reset() }
        }>
       <input
         id='title' ref={input => formFields.title = input}

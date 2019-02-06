@@ -40,19 +40,19 @@ class Body extends React.Component {
         'Content-Type' : 'application/json'
       },
       body: body,
-    }).then(
-      (response) => {
-        return json.response()
-      }).then(
-        (mix) => {
-      this.addNewMix(mix)
+    }).then((response) => {
+        return response.json()
+    }).then((mix) => {
+        this.addNewMix(mix)
+    }).catch((err) => {
+        console.log(err)
     })
   }
 
   addNewMix(mix){
-    this.setState({
-      mixes: this.state.mixes.push(mix)
-    })
+    this.setState(previousState => ({
+        mixes: [...previousState.mixes, mix]
+    }))
   }
 
   handleDelete(id) {

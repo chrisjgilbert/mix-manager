@@ -16,29 +16,31 @@ describe Api::V1::MixesController do
   end
 
   describe "POST 'create' " do
-    def create_mix
+    def create_mix_action
       mix = FactoryBot.build(:mix)
       post :create, params: { mix: { title: mix.title, description: mix.description, url: mix.url } }
     end
     it "returns a 200 response" do
-      create_mix
+      create_mix_action
       expect(response).to have_http_status(200)
     end
     it "creates a mix in the database" do
-      create_mix
-      expect { create_mix }.to change { Mix.count }.by(1)
+      create_mix_action
+      expect { create_mix_action }.to change { Mix.count }.by(1)
     end
   end
 
   describe "DESTROY 'delete' " do
     let!(:mix) { FactoryBot.create(:mix) }
-
-    it "returns a 200 response" do
+    def delete_mix_action
       delete :destroy, params: { id: mix.id }
+    end
+    it "returns a 200 response" do
+      delete_mix_action
       expect(response).to have_http_status(200)
     end
     it "deletes a mix from the database" do
-      expect { delete :destroy, params: { id: mix.id } }.to change { Mix.count }.by(-1)
+      expect { delete_mix_action }.to change { Mix.count }.by(-1)
     end
   end
 end
